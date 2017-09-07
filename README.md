@@ -1,16 +1,16 @@
-# Disable Live Content for P2G packages
+# Remove Live Content for P2G packages
 
 **Issue:**
 
-IIS 7.0 on Windows Server 2012 does not support WMV streaming (Microsoft Media Server); cannot setup following Mediasite content server.
+Windows Server 2012 does not work with [MMS protocol](https://msdn.microsoft.com/en-us/library/cc239490.aspx) [anymore](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) and following Mediasite content server cannot be made running.
 
 **Why is it an issue?**
 
-You can't proceed at importing such presentations (usually those from previous Mediasite Server versions).
+You can't proceed at importing presentations having defined WMV Live Content (usually those from previous Mediasite Server versions).
 
 **So?**
 
-Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0**.
+Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` set to **0**.
 
 ## DOWNLOAD
 
@@ -28,9 +28,9 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 
 ## CAVEAT
 
-* [Why is it such a bad idea to parse XML with regex?](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex).
+* [Why is it such a bad idea to parse XML with regex?](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex)
    
-   I do consider it appropriate as long as you parse a limited, known set of XML.
+   Conclusion: It's rather appropriate as long as you parse a limited, known set of XML.
 
 ## DISCLAIMER
 

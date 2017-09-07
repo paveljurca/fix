@@ -14,7 +14,7 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 
 ## DOWNLOAD
 
-https://github.com/paveljurca/p2g_fix/releases/tag/v0.1.0
+[v0.1.0](https://github.com/paveljurca/p2g_fix/releases/tag/v0.1.0)
 
 ## SYNOPSIS
 
@@ -25,6 +25,12 @@ https://github.com/paveljurca/p2g_fix/releases/tag/v0.1.0
 * Does not support zipped packages (unzip them first)
 * Built with [Perl2Exe](http://www.indigostar.com/perl2exe.php)
 * _IDE_ Notepad
+
+## CAVEAT
+
+* [Why is it such a bad idea to parse XML with regex?](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex).
+   
+   I do consider it appropriate as long as you parse a limited, known set of XML.
 
 ## DISCLAIMER
 

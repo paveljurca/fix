@@ -32,6 +32,10 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
    
    Conclusion: It's rather appropriate as long as you parse a limited, known set of XML.
 
+## LICENSE
+
+Released into the public domain.
+
 ## DISCLAIMER
 
 Don't blame me.

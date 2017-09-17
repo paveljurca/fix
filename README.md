@@ -2,11 +2,11 @@
 
 **Issue:**
 
-Windows Server 2012 is not in a support of [MMS](https://msdn.microsoft.com/en-us/library/cc239490.aspx) [anymore](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) and following Mediasite content server cannot be made running.
+Windows Server 2012 is not in a support of streaming over [MMS](https://msdn.microsoft.com/en-us/library/cc239490.aspx) [anymore](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) and following Mediasite content server cannot be made running though.
 
 **Why is it an issue?**
 
-You can't proceed at importing presentations having defined WMV Live Content (usually those from previous Mediasite Server versions).
+You can't proceed at such import where Live Content goes with WMV (usually originating from previous Mediasite Server versions).
 
 **So?**
 
@@ -29,8 +29,7 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 ## CAVEAT
 
 * [Why is it such a bad idea to parse XML with regex?](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex)
-   
-   Conclusion: It's rather appropriate as long as you parse a limited, known set of XML.
+  (It's rather appropriate as long as you parse a limited, known set of XML.)
 
 ## LICENSE
 

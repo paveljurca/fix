@@ -2,7 +2,7 @@
 
 **Issue:**
 
-Windows Server 2012 does not work with [MMS protocol](https://msdn.microsoft.com/en-us/library/cc239490.aspx) [anymore](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) and following Mediasite content server cannot be made running.
+Windows Server 2012 is not in a support of [MMS](https://msdn.microsoft.com/en-us/library/cc239490.aspx) [anymore](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) and following Mediasite content server cannot be made running.
 
 **Why is it an issue?**
 
@@ -10,7 +10,7 @@ You can't proceed at importing presentations having defined WMV Live Content (us
 
 **So?**
 
-Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` set to **0**.
+Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0**.
 
 ## DOWNLOAD
 

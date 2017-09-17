@@ -2,11 +2,11 @@
 
 **Issue:**
 
-Windows Server 2012 is not in a support of streaming over MMS anymore and it can't proceed at such Mediasite import where Live Content goes with WMV (usually originating from previous Mediasite Server versions) because following Mediasite content server cannot be made running though.
+Windows Server 2012 is not in a support of streaming over `MMS://` anymore, thus can't proceed at *such Mediasite import where Live Content goes with WMV* (usually originating from previous Mediasite Server versions) because following Mediasite content server cannot be made running though.
 
 See https://msdn.microsoft.com/en-us/library/cc239490.aspx and https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server.
 
-**So?**
+**Solution:**
 
 Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0**.
 

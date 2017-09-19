@@ -6,10 +6,6 @@ Windows Server 2012 drops support for streaming over `MMS://` (and basically Win
 
 ..This is only a problem if you get to **import a Live Content presentation** originating from previous Mediasite Server versions.
 
-* https://msdn.microsoft.com/en-us/library/cc239490.aspx
-* https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server
-* https://www.iis.net/downloads/microsoft/smooth-streaming
-
 **Solution:**
 
 Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0**. (It does nothing to the original media.) From there you proceed at import easily.
@@ -27,6 +23,12 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 * Does not support zipped packages (unzip them first)
 * Built with [Perl2Exe](http://www.indigostar.com/perl2exe.php)
 * _IDE_ Notepad
+
+## CAVEAT
+
+* https://msdn.microsoft.com/en-us/library/cc239490.aspx
+* https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server
+* https://www.iis.net/downloads/microsoft/smooth-streaming
 
 ## CODE
 

@@ -21,14 +21,13 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 ## NOTES
 
 * Does not support zipped packages (unzip them first)
+* Windows Media Server
+
+   * https://msdn.microsoft.com/en-us/library/cc239490.aspx
+   * https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server
+   * https://docs.microsoft.com/en-us/iis/media/on-demand-smooth-streaming/getting-started-with-iis-smooth-streaming
 * Built with [Perl2Exe](http://www.indigostar.com/perl2exe.php)
 * _IDE_ Notepad
-
-## CAVEAT
-
-* https://msdn.microsoft.com/en-us/library/cc239490.aspx
-* https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server
-* https://www.iis.net/downloads/microsoft/smooth-streaming
 
 ## CODE
 

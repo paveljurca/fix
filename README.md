@@ -1,14 +1,24 @@
 # Remove Live Content for P2G packages
 
+## Mediasite Video Platform
+
 **Issue:**
 
-Windows Server 2012 drops support for streaming over `MMS://` (and basically Windows Media Server; 2012 have switched to SmoothStreaming  built to IIS) thus following Mediasite content server for **WMV Video** cannot be made running. Sonic Foundry suggest downgrade to Windows Server 2008, but keep on reading..
+Windows Server 2012 drops support for streaming over `MMS://` (and basically Windows Media Server; 2012 had switched to SmoothStreaming  built to IIS) thus following **Broadcast — Windows Media (wmv, wma)** content server cannot be made running. Sonic Foundry suggest downgrade to Windows Server 2008, but keep on reading..
 
-..This is only a problem if you get to **import a Live Content presentation** originating from previous Mediasite Server versions.
+..This is only a problem if you get to import a Live Content presentation originating from previous Mediasite Server versions.
 
 **Solution:**
 
 Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0**. (It does nothing to the original media.) From there you proceed at import easily.
+
+**BEFORE**
+
+![BEFORE the fix](BEFORE.png)
+
+**AFTER**
+
+![AFTER the fix](AFTER.png)
 
 ## DOWNLOAD
 

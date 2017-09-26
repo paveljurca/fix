@@ -18,6 +18,10 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 
 `p2g_fix.exe --live *P2G *P2G *P2G [...]`
 
+## USAGE
+
+`for /f "usebackq tokens=*" %x in (`cmd /c "dir /a:d /b"`) do @p2g_fix.exe --live "%x" > FIXED.txt`
+
 ## NOTES
 
 * Does not support zipped packages (unzip them first)

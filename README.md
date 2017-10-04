@@ -32,7 +32,7 @@ Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveS
 
 Wrap calls in a loop to surpass the [command-line string length of 8191 characters limitation](https://support.microsoft.com/en-us/help/830473/command-prompt-cmd--exe-command-line-string-limitation).
 
-    for /f "usebackq tokens=*" %x in (`cmd /c "dir /b /a:d"`) do @p2g_fix.exe --live "%x" >>FIXED.txt
+    for /d %f in ("YOUR_P2G_FOLDERS\*") do @p2g_fix.exe --live "%~ff" >>FIXED.txt
 
 ## NOTES
 

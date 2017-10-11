@@ -1,12 +1,12 @@
-# Remove Live Content for imported presentations ([Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/))
+# Remove Live Content for exported presentations ([Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/))
 
-**What:**
+# WHAT
 
 Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0** to not show up Live Content at import.
 
 * It does nothing to the original media
 
-From here you proceed at import easily. See screenshots below.
+From here you proceed with the import easily. See the screenshots below.
 
 _BEFORE_
 
@@ -16,7 +16,7 @@ _AFTER_
 
 ![AFTER the fix](AFTER.png)
 
-**Why:**
+# WHY
 
 Windows Server 2012 drops support for streaming over `MMS://` and Windows Media Server.
 Server 2012 had switched to SmoothStreaming built to IIS thus the Mediasite **Broadcast — Windows Media (wmv, wma)**
@@ -37,7 +37,7 @@ But we were not.
 
 ## USAGE
 
-Wrap calls in a loop to surpass the [command-line string length limitation (8191 characters)](https://support.microsoft.com/en-us/help/830473/command-prompt-cmd--exe-command-line-string-limitation):
+Wrap calls in a loop to surpass the [command-line string length limitation](https://support.microsoft.com/en-us/help/830473/command-prompt-cmd--exe-command-line-string-limitation) (8191 characters):
 
     for /d %f in ("YOUR_IMPORT_FOLDERS\*") do @import_fix.exe --live "%~ff" >>fixed.txt
 
@@ -53,7 +53,7 @@ Wrap calls in a loop to surpass the [command-line string length limitation (8191
 
 ## CODE
 
-* [Why is it such a bad idea to parse XML with regex](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex) and why is it not
+* [Why is it such a bad idea to parse XML with regex](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex) and why it is not
 * _IDE_ Microsoft Notepad
 
 ## LICENSE

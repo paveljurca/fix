@@ -1,12 +1,12 @@
-# Remove Live Content for exported presentations ([Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/))
+# Remove Live Content at import ([Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/))
 
 # WHAT
 
-Update Mediasite Presentation XML file with `IsLive` set to **false** and `LiveStatus` **0** to not show up Live Content at import.
+Update Mediasite Presentation XML file with **IsLive** set to false and **LiveStatus** 0 to not show up Live Content at the import dialog box.
 
 * It does nothing to the original media
 
-From here you proceed with the import easily. See the screenshots below.
+See the screenshots below.
 
 _BEFORE_
 
@@ -18,14 +18,14 @@ _AFTER_
 
 # WHY
 
-Windows Server 2012 drops support for streaming over `MMS://` and Windows Media Server.
-Server 2012 had switched to SmoothStreaming built to IIS thus the Mediasite **Broadcast — Windows Media (wmv, wma)**
-content server cannot be set up.
+Windows Server 2012 drops support for Windows Media Server and streaming over `MMS://`.
+They had switched to SmoothStreaming built to IIS previously, thus the Mediasite **Broadcast — Windows Media (wmv, wma)**
+content server cannot be set up any more.
 
-Sonic Foundry suggest downgrade to Windows Server 2008, but unless you are going to import
-a Live Content presentations originating from previous Mediasite Server versions you are good.
+*Sonic Foundry suggests downgrade to Windows Server 2008, but unless you are going to import
+Live Content presentations originating from previous Mediasite Server versions you are good.
 
-But we were not.
+But we were not.*
 
 ## DOWNLOAD
 
@@ -39,7 +39,7 @@ But we were not.
 
 Wrap calls in a loop to surpass the [command-line string length limitation](https://support.microsoft.com/en-us/help/830473/command-prompt-cmd--exe-command-line-string-limitation) (8191 characters):
 
-    for /d %f in ("YOUR_IMPORT_FOLDERS\*") do @import_fix.exe --live "%~ff" >>fixed.txt
+    for /d %f in ("IMPORT_FOLDERS\*") do @import_fix.exe --live "%~ff" >>fixed.txt
 
 ## NOTES
 

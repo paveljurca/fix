@@ -2,7 +2,7 @@
 
 # WHAT
 
-Update Mediasite Presentation XML file with **IsLive** set to false and **LiveStatus** 0 to not show up Live Content at the import dialog box.
+Update Mediasite Presentation XML files with **IsLive** set to false and **LiveStatus** set to 0 to not to subsequently import Live Content.
 
 * It does nothing to the original media
 
@@ -18,14 +18,14 @@ _AFTER_
 
 # WHY
 
-Windows Server 2012 drops support for Windows Media Server and streaming over `MMS://`.
-They had switched to SmoothStreaming built to IIS previously, thus the Mediasite **Broadcast — Windows Media (wmv, wma)**
-content server cannot be set up any more.
+Windows Server 2012 dropped support for Windows Media Server and streaming over `MMS://` respectively.
+They had switched to SmoothStreaming built to IIS, so the Mediasite **Broadcast — Windows Media (wmv, wma)**
+content server can't be made up any more.
 
-*Sonic Foundry suggests downgrade to Windows Server 2008, but unless you are going to import
-Live Content presentations originating from previous Mediasite Server versions you are good.
+*Sonic Foundry suggest a downgrade to Windows Server 2008, but unless you are going to import
+Live Content presentations originating from previous Mediasite Server versions you are all good.*
 
-But we were not.*
+But we were not.
 
 ## DOWNLOAD
 

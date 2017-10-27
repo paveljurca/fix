@@ -1,4 +1,6 @@
-# Remove Live Content at import ([Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/))
+# live-content-import-fix
+
+## [Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/)
 
 # WHAT
 

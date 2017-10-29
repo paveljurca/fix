@@ -1,6 +1,6 @@
 # live-content-import-fix \[[Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/)\]
 
-Update Mediasite Presentation XML files with **IsLive** set to false and **LiveStatus** set to 0 to not to then import [Live Content](https://msdn.microsoft.com/en-us/library/ff723875(v=expression.40).aspx) altogether with the presentation.
+Update Mediasite Presentation XML files with **IsLive** set to false and **LiveStatus** set to 0 to not to import [Live Content](https://msdn.microsoft.com/en-us/library/ff723875(v=expression.40).aspx) altogether with the presentation.
 
 * It does nothing to the original media
 
@@ -30,7 +30,8 @@ Wrap calls in a loop to surpass the [command-line string length limitation](http
 
 ## ABOUT
 
-Windows Server 2012 dropped support for Windows Media Server and streaming over `MMS://` respectively.
+Windows Server 2012 dropped support for [Windows Media Server](https://msdn.microsoft.com/en-us/library/cc239490.aspx)
+and [streaming over `MMS://`](https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server) respectively.
 They had switched to [Live Smooth Streaming](https://technet.microsoft.com/en-us/library/ee791818(v=ws.10).aspx).
 The Mediasite **Broadcast — Windows Media (wmv, wma)** content server can't be set up any more.
 
@@ -39,20 +40,13 @@ Live Content presentations originating from previous Mediasite Server versions y
 
 But we were not.
 
-## NOTES
-
-* Does not support zipped packages (unzip them first)
-* Windows Media Server
-   * https://msdn.microsoft.com/en-us/library/cc239490.aspx
-   * https://docs.microsoft.com/en-us/iis/media/windows-media-services/windows-media-server-or-web-server
-* Smooth Streaming
-   * https://docs.microsoft.com/en-us/iis/media/on-demand-smooth-streaming/getting-started-with-iis-smooth-streaming
-* Built with [Perl2Exe](http://www.indigostar.com/perl2exe.php)
-
 ## CODE
 
+**Does not support zipped packages (unzip them first).**
+
 * [Why is it such a bad idea to parse XML with regex](https://stackoverflow.com/questions/8577060/why-is-it-such-a-bad-idea-to-parse-xml-with-regex) and why it is not
-* _IDE_ Microsoft Notepad
+* Built with [Perl2Exe](http://www.indigostar.com/perl2exe.php)
+* _IDE_ Microsoft Notepad :))
 
 ## LICENSE
 

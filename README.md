@@ -1,10 +1,6 @@
-# live-content-import-fix
+# live-content-import-fix \[[Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/)\]
 
-## [Mediasite Video Platform](http://www.sonicfoundry.com/mediasite/)
-
-# WHAT
-
-Update Mediasite Presentation XML files with **IsLive** set to false and **LiveStatus** set to 0 to not to subsequently import Live Content.
+Update Mediasite Presentation XML files with **IsLive** set to false and **LiveStatus** set to 0 to not to then import [Live Content](https://msdn.microsoft.com/en-us/library/ff723875(v=expression.40).aspx) altogether with the presentation.
 
 * It does nothing to the original media
 
@@ -17,17 +13,6 @@ _BEFORE_
 _AFTER_
 
 ![AFTER the fix](AFTER.png)
-
-# WHY
-
-Windows Server 2012 dropped support for Windows Media Server and streaming over `MMS://` respectively.
-They had switched to SmoothStreaming built to IIS, so the Mediasite **Broadcast — Windows Media (wmv, wma)**
-content server can't be made up any more.
-
-*Sonic Foundry suggest a downgrade to Windows Server 2008, but unless you are going to import
-Live Content presentations originating from previous Mediasite Server versions you are all good.*
-
-But we were not.
 
 ## DOWNLOAD
 
@@ -42,6 +27,17 @@ But we were not.
 Wrap calls in a loop to surpass the [command-line string length limitation](https://support.microsoft.com/en-us/help/830473/command-prompt-cmd--exe-command-line-string-limitation) (8191 characters):
 
     for /d %f in ("IMPORT_FOLDERS\*") do @import_fix.exe --live "%~ff" >>fixed.txt
+
+## ABOUT
+
+Windows Server 2012 dropped support for Windows Media Server and streaming over `MMS://` respectively.
+They had switched to [Live Smooth Streaming](https://technet.microsoft.com/en-us/library/ee791818(v=ws.10).aspx).
+The Mediasite **Broadcast — Windows Media (wmv, wma)** content server can't be set up any more.
+
+*Sonic Foundry suggest a downgrade to Windows Server 2008, but unless you are going to import
+Live Content presentations originating from previous Mediasite Server versions you are all good.*
+
+But we were not.
 
 ## NOTES
 
